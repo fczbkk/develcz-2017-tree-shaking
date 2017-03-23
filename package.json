@@ -1,0 +1,36 @@
+{
+  "name": "devel-2017-tree-shaking",
+  "version": "1.0.0",
+  "description": "Podklady k prednáške pre Devel 2017.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fczbkk/devel-2017-tree-shaking.git"
+  },
+  "author": {
+    "name": "Riki Fridrich",
+    "email": "riki@fczbkk.com",
+    "url": "https://github.com/fczbkk"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fczbkk/config-mask/issues",
+    "email": "riki@fczbkk.com"
+  },
+  "homepage": "https://github.com/fczbkk/devel-2017-tree-shaking#readme",
+  "scripts": {
+    "build": "npm run build:classic && npm run build:tree_shaking",
+    "build:classic": "webpack",
+    "build:tree_shaking": "babel src -d module"
+  },
+  "main": "lib/index.js",
+  "module": "module/index.js",
+  "webpack": "module/index.js",
+  "jsnext:main": "module/index.js",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "uglifyjs-webpack-plugin": "^0.3.0",
+    "webpack": "^2.2.1"
+  }
+}
